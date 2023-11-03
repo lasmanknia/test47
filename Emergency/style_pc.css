@@ -1,0 +1,43 @@
+@media only screen and (min-width: 600px) {
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 10px;
+    border: solid rgb(255, 139, 23);
+}
+main{
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.medi6{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: center;
+    padding: 20px;
+}
+.medi{
+    width: 100px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.medi a{
+    color: rgb(236, 156, 106);
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+main ion-icon{
+    font-size: 4rem;
+    width: 100%;
+}
+}

@@ -1,0 +1,41 @@
+.logopic{
+    height: 50px;
+    overflow: hidden;
+    right: 0px;
+    transition: 1s;
+    width: 50px;
+    opacity: 0.7;
+    z-index: 2;
+    overflow: hidden;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.logopic img{
+    width: 50px;
+    height: 50px;
+}
+.logopic ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: -7px;
+    
+}
+.logopic li{
+    list-style-type: none;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ }
+.logopic li a{
+    text-decoration: none;
+    padding: 1px;
+    font-size: 0.8rem;
+    color: black;
+    text-transform: uppercase;
+}
+.logopic:hover{
+  background-color: white;
+  height: 150px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style_tablet.css">
+    <link rel="stylesheet" href="style_mobile.css">
+    <link rel="stylesheet" href="style_pc.css">
+    <link rel="stylesheet" href="style_nav.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+                    .list:nth-child(3){
+                background-color: var(--color);  
+}
+body{
+  height: 100vh;
+  overflow: hidden;
+}
+    </style>
+</head>
+<body>
+
+  <div class="logopic">
+    <img src="https://drive.google.com/uc?id=1vSq4wpb4akw42tVeH8rwAFKmT0yjvbbJ" alt="">
+         <ul>
+            <li><a href=""><ion-icon name="call-outline"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="chatbubble-outline"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="qr-code-outline"></ion-icon></a></li>
+            <li><a class="dark-mode-toggle" href="#"><ion-icon name="contrast-outline"></ion-icon></a></li>
+         </ul>
+  </div>
+
+   <!--navbar-->
+   <nav>
+    <div class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="index.html">
+              <span class="icon" id="a1">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="member.html">
+              <span class="icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </span>
+              <span class="text">Profile</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="contact.html">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="text">Message</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="post.html">
+              <span class="icon">
+                <ion-icon name="albums-outline"></ion-icon>
+              </span>
+              <span class="text">Photos</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="login.html">
+              <span class="icon">
+                <ion-icon name="log-in-outline"></ion-icon>
+              </span>
+              <span class="text">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--navbar End-->
+ 
+         <h2>Contact Us</h2>
+         <div class="lekha">টাকার পয়সা লেনদেনের সময় আমরা দুই এক টাকার হিসাবে খুব তেমন একটা গুরুত্ব দেই না। তবে " ছোট ছোট বালুকণা বিন্দু বিন্দু জল গড়ে তোলে মহাদেশ সাগর অতল "আপনার প্রতিদিনের সেই ১ টাকার সর্বোত্তম ব্যবহারের স্বার্থে উদ্যোগী হয়েছে একদল তরুণ-তরুণী। প্রতি সদস্যের প্রতিদিন ১ টাকা (বা মাসে ৩০ টাকা) করে সংগ্রহ করে সমাজসেবায় অংশ নেয়াই এই তরুণ-তরুণীদের "উদ্যোগ"।</div>
+         <div class="con">
+            <p>Number - <a href="tel:01816267777">01816267777</a></p>
+            <p>Number - <a href="tel:01788-702616">01788-702616</a></p>
+            <p>Gmail - <a href="mailto:uddog.sw@gmail.com">uddog.sw@gmail.com</a></p>
+            <p>Gmail - <a href="mailto:uddog.ri@gmail.com">uddog.ri@gmail.com</a></p>
+        </div>
+         <div class="contact">
+            <div class="middle">
+                <a class="btn" href="https://www.facebook.com/uddog.e.how/">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn" href="https://www.facebook.com/groups/1213903963339433">
+                  <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="btn" href="#">
+                  <i class="fab fa-facebook-messenger"></i>
+                </a>
+              </div>
+         </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!---DarkMode-->
+    <script>
+      // Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+
+    // Check if dark mode is enabled
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+}
+
+// Function to handle the dark mode toggle button
+function setupDarkModeToggle() {
+    const body = document.body;
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Update the dark mode state in local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+}
+
+// Call the functions when the page loads
+window.addEventListener('load', toggleDarkMode);
+window.addEventListener('load', setupDarkModeToggle);
+
+
+
+
+
+
+
+
+//colour Picker
+
+function changeColor(newColor) {
+    document.documentElement.style.setProperty('--color', newColor);
+    localStorage.setItem('mainColor', newColor);
+}
+
+// Check if there is a saved color in local storage and apply it
+const savedColor = localStorage.getItem('mainColor');
+if (savedColor) {
+    changeColor(savedColor);
+}
+
+
+
+    </script>
+</body>
+</html>

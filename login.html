@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style_tablet.css">
+    <link rel="stylesheet" href="style_mobile.css">
+    <link rel="stylesheet" href="style_pc.css">
+    <link rel="stylesheet" href="style_nav.css">
+    <link rel="stylesheet" href="darkmode.css">
+    <style>
+                    .list:nth-child(5){
+                background-color: var(--color);  
+}
+body{
+  height: 100vh;
+  overflow: hidden;
+}
+    </style>
+</head>
+<body>
+
+      <!--navbar-->
+      <nav>
+        <div class="navigation">
+            <ul>
+              <li class="list active">
+                <a href="index.html">
+                  <span class="icon" id="a1">
+                    <ion-icon name="home-outline"></ion-icon>
+                  </span>
+                  <span class="text">Home</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="member.html">
+                  <span class="icon">
+                    <ion-icon name="people-outline"></ion-icon>
+                  </span>
+                  <span class="text">Profile</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="contact.html">
+                  <span class="icon">
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                  </span>
+                  <span class="text">Message</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="post.html">
+                  <span class="icon">
+                    <ion-icon name="albums-outline"></ion-icon>
+                  </span>
+                  <span class="text">Photos</span>
+                </a>
+              </li>
+              <li class="list">
+                <a href="login.html">
+                  <span class="icon">
+                    <ion-icon name="log-in-outline"></ion-icon>
+                  </span>
+                  <span class="text">Settings</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--navbar End-->
+        <h2>UDDOG MEMBER PANEL</h2>
+<div class="loog">
+        <div id="login-form">
+            <h5>Please Use Your Personal Phone</h5>
+            <input type="text" id="username-input" placeholder="Your Username">
+            <input type="password" id="password-input" placeholder="Your Password">
+            <button id="submit-button">Log In</button>
+            <a class="forg" href="foget.html">forget your pasword?</a>
+        </div>
+       
+        <div id="salmananik" style="display: none;">
+            <h3>Welcome, <span id="welcome-username"></span>!</h3>
+            <a class="lock" href="members/salmananik.html">GO TO YOUR DASHBOARD</a>
+        </div>
+        <div id="next-page2" style="display: none;">
+            <h3>Welcome, <span id="welcome-username2"></span>!</h3>
+            <a class="lock" href="page2.html">GO TO YOUR DASHBOARD</a>
+        </div>
+</div>
+
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!---DarkMode-->
+    <script>
+      // Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+
+    // Check if dark mode is enabled
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+}
+
+// Function to handle the dark mode toggle button
+function setupDarkModeToggle() {
+    const body = document.body;
+    const darkModeToggle = document.querySelector('.dark-mode-toggle');
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+
+        // Update the dark mode state in local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+}
+
+// Call the functions when the page loads
+window.addEventListener('load', toggleDarkMode);
+window.addEventListener('load', setupDarkModeToggle);
+
+
+
+
+
+
+
+
+//colour Picker
+
+function changeColor(newColor) {
+    document.documentElement.style.setProperty('--color', newColor);
+    localStorage.setItem('mainColor', newColor);
+}
+
+// Check if there is a saved color in local storage and apply it
+const savedColor = localStorage.getItem('mainColor');
+if (savedColor) {
+    changeColor(savedColor);
+}
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 90vw;
+            padding: 20px;
+            margin-top: 10px;
+            text-align: center;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+        img{
+            width: 90%;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img src="img/post1.jpg" alt="">
+        <p>উমর (রাঃ) একটি বাড়ির পাশ দিয়ে যাওয়ার
+            সময় বাড়ির জানালা দিয়ে তাকালেন (তিনি এটি
+            করতেন শুধুমাত্র মানুষকে খারাপ কাজ থেকে
+            নিষেধ বা ভালো কাজের উপদেশ দানের জন্য),
+            তিনি দেখলেন যে, একজন মুসলিম ভাই
+            অ্যালকোহল পান করছে।<br>
+            উনি দ্রুত তার বাসায় প্রবেশ করলেন এবং
+            তাকে বললেন যে তুমি তো হারাম কাজ করছো।
+            তখন ঐ লোকটি উমর (রাঃ) কে বললো যে,
+            আমি একটি হারাম করছি আর আপনি তো
+            তিনটি হারাম কাজ করলেন।
+            এক. আপনি অন্যর বাড়ির জানালা দিয়ে
+            তাকিয়েছেন।<br>
+            
+            দুই. আপনি অনুমতি না নিয়ে অন্যের বাড়িতে
+            প্রবেশ করেছেন।<br>
+            
+            তিন. আপনি নিশ্চিত না হয়ে অনুমান করে
+            বলেছেন যে, আমি অ্যালকোহল পান করছি।
+            তখন উমর (রাঃ) বললেন যে, তুমি ঠিকই
+            বলেছ। বলে উনি চলে গেলেন। এর কিছুদিন
+            পর উমর (রাঃ) মসজিদে খুতবা দিচ্ছিলেন
+            সেই সময়ে ঐ লোক মসজিদে প্রবেশ করে
+            পেছনে বসলেন। খুতবা শেষ করে উমর (রাঃ)
+            ঐ লোকের কাছে গেলেন গিয়ে চারপাশে তাকিয়ে
+            চুপচুপে বললেন যে,<br>
+            দেখ! সেদিনের পর আমি আর কারো বাড়ির
+            জানালার দিকে তাকাই না। আর আমি তোমার ঐ
+            ঘটনাকে কারো কাছে বলিনি। তখন ঐ লোক
+            বললো যে, আমিও সেদিন থেকে আর অ্যালকোহল
+            পান করিনা। কি সুন্দর ছিলো উপদেশ দেয়া
+            আর উপদেশ গ্রহন করার ঘটনা গুলো,
+            অথচ কেউ আমাদের উপদেশ দিলে আমরা
+            অনেক সময় ভালোভাবে গ্রহন করতে
+            পারি না। আল্লাহ রাব্বুল আলামিন রাসুল (সাঃ)
+            ও তার সাহাবা (রাঃ) চরিত্রের মত চারিত্রিক
+            গুনাবলী দান করুন।</p>
+    </main>
+        <!---DarkMode-->
+        <script>
+            // Function to toggle dark mode
+      function toggleDarkMode() {
+          const body = document.body;
+      
+          // Check if dark mode is enabled
+          if (localStorage.getItem('dark-mode') === 'enabled') {
+              body.classList.add('dark-mode');
+          }
+      }
+      
+      // Function to handle the dark mode toggle button
+      function setupDarkModeToggle() {
+          const body = document.body;
+          const darkModeToggle = document.querySelector('.dark-mode-toggle');
+      
+          darkModeToggle.addEventListener('click', () => {
+              body.classList.toggle('dark-mode');
+      
+              // Update the dark mode state in local storage
+              if (body.classList.contains('dark-mode')) {
+                  localStorage.setItem('dark-mode', 'enabled');
+              } else {
+                  localStorage.setItem('dark-mode', 'disabled');
+              }
+          });
+      }
+      
+      // Call the functions when the page loads
+      window.addEventListener('load', toggleDarkMode);
+      window.addEventListener('load', setupDarkModeToggle);
+      
+      
+      
+      
+      
+      //colour Picker
+      
+      function changeColor(newColor) {
+          document.documentElement.style.setProperty('--color', newColor);
+          localStorage.setItem('mainColor', newColor);
+      }
+      
+      // Check if there is a saved color in local storage and apply it
+      const savedColor = localStorage.getItem('mainColor');
+      if (savedColor) {
+          changeColor(savedColor);
+      }
+      
+      
+      
+          </script>
+</body>
+</html>

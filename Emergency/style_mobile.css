@@ -1,0 +1,66 @@
+:root {
+    --color:#ED7D31;
+    }
+
+@media only screen and (max-width: 600px) {
+*{
+    margin: 0;
+    padding: 0;
+} 
+/*For Medical*/
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 10px;
+    border: solid var(--color);
+}
+main{
+    margin-top: 10px;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+.medi6{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+.medi{
+    border-radius: 10px;
+    width: 25vw;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.medi a{
+    color: var(--color);
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.medi:hover{
+    background-color: var(--color);
+}
+.medi a:hover{
+    color: white;
+}
+main ion-icon{
+    font-size: 4rem;
+    width: 100%;
+}
+h3{
+    width: 70vw;
+    font-size: 0.9rem;
+    margin: 10px auto;
+    background-color: rgb(0, 179, 255);
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+}
+h3 a{
+    text-decoration: none;
+    color: white;
+}
+}
